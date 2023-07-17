@@ -1,0 +1,36 @@
+.card__container{
+  min-width:375px;
+  max-width:1440px;
+  background-color: var(--white);
+  background-image: url('../assets/images/bg-main-mobile.png');
+  background-size: auto;
+}
+
+.card__main{
+  display:grid;
+}
+
+.card__images{
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(5,auto);
+}
+
+.card__main-bg{
+  grid-area: 1/1/5/6;
+}
+
+.card__back{
+  grid-area: 1/2/4/6;
+  padding-top:1.5rem;
+  padding-right:1rem;
+}
+
+.card__front{
+  grid-area: 3/1/6/5;
+  padding-left:1rem;
+  padding-bottom: 1rem;
+}
+
+
+
