@@ -1,10 +1,10 @@
-@import url('./reset.css');
+@import url("./reset.css");
 
-:root{
+:root {
   /* --colors-- */
   /* primary */
-  --linear-gradient:hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
-  --red-error:hsl(0, 100%, 66%);
+  --linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+  --red-error: hsl(0, 100%, 66%);
 
   /* neutral */
   --white: hsl(0, 0%, 100%);
@@ -13,14 +13,17 @@
   --very-dark-violet: hsl(278, 68%, 11%);
 
   /* font family */
-  --ff-regular:'Space Grotesk', sans-serif;
-  --fw-regular:500;
-  
+  --ff-regular: "Space Grotesk", sans-serif;
+  --fw-regular: 500;
 }
 
-body{
+body {
   font-family: var(--ff-regular);
   font-weight: var(--fw-regular);
   font-size: 1.125rem;
 }
 
+input {
+  box-sizing: border-box;
+  width: 100%;
+}

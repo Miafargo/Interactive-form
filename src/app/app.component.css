@@ -1,56 +1,116 @@
-.card__container{
-  min-width:375px;
-  max-width:1440px;
-  
+.card__container {
+  min-width: 375px;
+  max-width: 1440px;
 }
 
-.card__main{
-  display:grid;
-  
+.card__main {
+  display: grid;
 }
 
-.card__images{
-  display:grid;
-  grid-template-columns: repeat(5,1fr);
-  grid-template-rows: repeat(7,1fr);
+.place-center {
+  justify-self: center;
+  align-self: center;
 }
 
-.card__bg-image{
-  grid-area:1/1/-2/-1;
-  background-image: url('../assets/images/bg-main-mobile.png');
+.card__images {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(7, 1fr);
+  --font-size: 0.6rem;
+}
+
+.card__bg-image {
+  grid-area: 1/1/-2/-1;
+  background-image: url("../assets/images/bg-main-mobile.png");
   background-size: contain;
-  
 }
 
-.card__back{
+.card__back {
   grid-area: 1/2/-1/6;
-  padding-top:1.5rem;
-  padding-right:1rem;
+  padding-top: 1.5rem;
+  padding-right: 1rem;
 }
 
-.card__front{
+.card__front {
   grid-area: 3/1/8/5;
-  padding-left:1rem;
-  padding-top:2.25rem;
+  padding-left: 1rem;
+  padding-top: 2.25rem;
 }
 
-.card__security{
+.card__security {
   grid-area: 3/4/4/6;
   color: var(--white);
-  align-self: center;
-  justify-self: center;
-  font-size: .8rem;
+  font-size: var(--font-size);
   padding-left: 1.5rem;
-  padding-top:.5rem;
+  padding-top: 0.5rem;
 }
 
-.card__logo{
+.card__logo {
   grid-area: 4/1/6/3;
   justify-self: center;
   margin-top: 1rem;
-  margin-left:.5rem;
+  margin-left: 0.5rem;
 }
 
+.card__number {
+  color: var(--white);
+  grid-area: 6/1/7/5;
+  letter-spacing: 2px;
+  margin-left: 1rem;
+}
 
+.card__name {
+  color: var(--white);
+  grid-area: 7/1/8/3;
+  font-size: var(--font-size);
+  margin-left: 0.5rem;
+  margin-bottom: 0.4rem;
+}
 
+.card__date {
+  color: var(--white);
+  font-size: var(--font-size);
+  grid-area: 7/4/8/5;
+  margin-bottom: 0.4rem;
+}
 
+.card__form {
+  padding: 3rem 1.5rem;
+}
+
+.card__info {
+  display: grid;
+}
+
+.card__info label {
+  font-size: 0.7rem;
+  color: var(--very-dark-violet);
+  margin-bottom: 0.4rem;
+  letter-spacing: 1.5px;
+}
+
+.card__info input {
+  border: 1px solid;
+  border-color: var(--light-grayish-violet);
+  border-radius: 0.5rem;
+  color: var(--dark-grayish-violet);
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+}
+
+.card__cvc {
+  margin-left: 1rem;
+}
+
+.card__exp {
+  display: grid;
+  grid-template-columns: 3.5rem 1rem 3.5rem 1rem auto;
+}
+
+.card__submit {
+  border: transparent;
+  border-radius: 0.5rem;
+  background-color: var(--very-dark-violet);
+  color: var(--white) !important;
+  padding: 0.7rem 0;
+}
