@@ -24,25 +24,67 @@
     </div>
   </div>
   <div class="card__form">
-    <form action="" class="card__info">
+    <form
+      action=""
+      class="card__info"
+      [formGroup]="cardForm"
+      (ngSubmit)="onSubmit()"
+    >
       <label for="name"> CARDHODLER NAME</label>
-      <input type="text" id="name" name="name" value="e.g. Jane Appleseed" />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        value="e.g. Jane Appleseed"
+        autocomplete="off"
+        formControlName="name"
+      />
       <label for="card-number">CARD NUMBER</label>
       <input
         type="text"
         id="card-number"
         name="card-number"
         value="e.g. 1234 5678 9123 0000"
+        maxlength="19"
+        autocomplete="off"
+        formControlName="cardNumber"
       />
       <label for="date"
         >EXP.DATE (MM/YY) <span class="card__cvc">CVC</span></label
       >
       <div class="card__exp">
-        <input class="month" type="text" id="date" name="date" value="MM" />
+        <input
+          class="month"
+          type="text"
+          id="date"
+          name="date"
+          value="MM"
+          maxlength="2"
+          autocomplete="off"
+          formControlName="month"
+        />
         <div class="space"></div>
-        <input class="year" type="text" id="date" name="date" value="YY" />
+        <input
+          class="year"
+          type="text"
+          id="date"
+          name="date"
+          value="YY"
+          maxlength="2"
+          autocomplete="off"
+          formControlName="year"
+        />
         <div class="space"></div>
-        <input class="cvc" type="text" id="date" name="date" value="e.g. 123" />
+        <input
+          class="cvc"
+          type="text"
+          id="date"
+          name="date"
+          value="e.g. 123"
+          maxlength="3"
+          autocomplete="off"
+          formControlName="cvc"
+        />
       </div>
       <input type="submit" class="card__submit" value="Confirm" />
     </form>
