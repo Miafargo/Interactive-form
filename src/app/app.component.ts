@@ -11,16 +11,20 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 })
 export class AppComponent {
   cardForm = this.fb.group({
-    name:['',Validators.required],
-    cardNumber:['',Validators.required],
-    month:['',Validators.required],
-    year:['',Validators.required],
-    cvc:['',Validators.required]
+    name:['e.g. Jane Appleseed',Validators.required],
+    cardNumber:['e.g. 1234 5678 9123 0000',[Validators.required, Validators.pattern("[0-9 ]+")]],
+    month:['MM',Validators.required],
+    year:['YY',Validators.required],
+    cvc:['e.g. 123',Validators.required]
   })
   constructor(private fb: FormBuilder){}
 
   onSubmit = () =>{
     console.log('submitted form', this.cardForm.value)
+  }
+
+  get f(){
+    return this.cardForm.controls;
   }
   
   title = 'interactive-form';

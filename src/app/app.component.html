@@ -39,6 +39,14 @@
         autocomplete="off"
         formControlName="name"
       />
+      <span
+        [ngStyle]="{
+          visibility: f.name.touched && f.name.invalid ? 'visible' : 'hidden'
+        }"
+        class="card__warning"
+      >
+        Name is required</span
+      >
       <label for="card-number">CARD NUMBER</label>
       <input
         type="text"
@@ -49,6 +57,14 @@
         autocomplete="off"
         formControlName="cardNumber"
       />
+      <span
+        [ngStyle]="{
+          visibility:
+            f.cardNumber.touched && f.cardNumber.invalid ? 'visible' : 'hidden'
+        }"
+        class="card__warning"
+        >Wrong format, numbers only</span
+      >
       <label for="date"
         >EXP.DATE (MM/YY) <span class="card__cvc">CVC</span></label
       >
@@ -85,6 +101,30 @@
           autocomplete="off"
           formControlName="cvc"
         />
+        <span
+          [ngStyle]="{
+            visibility:
+              f.month.touched && f.month.invalid ? 'visible' : 'hidden'
+          }"
+          class="card__warning"
+          >Can't be blank</span
+        >
+        <div class="space"></div>
+        <span
+          [ngStyle]="{
+            visibility: f.year.touched && f.year.invalid ? 'visible' : 'hidden'
+          }"
+          class="card__warning"
+          >Can't be blank</span
+        >
+        <div class="space"></div>
+        <span
+          [ngStyle]="{
+            visibility: f.cvc.touched && f.cvc.invalid ? 'visible' : 'hidden'
+          }"
+          class="card__warning"
+          >Can't be blank</span
+        >
       </div>
       <input type="submit" class="card__submit" value="Confirm" />
     </form>

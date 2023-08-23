@@ -94,7 +94,7 @@
   border-color: var(--light-grayish-violet);
   border-radius: 0.5rem;
   color: var(--dark-grayish-violet);
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   padding: 0.4rem;
 }
 
@@ -113,4 +113,15 @@
   background-color: var(--very-dark-violet);
   color: var(--white) !important;
   padding: 0.7rem 0;
+}
+
+.card__warning {
+  font-size: 0.7rem;
+  color:var(--red-error);
+  margin: .2rem 0rem;
+}
+
+.card__exp span{
+  font-size:0.5rem;
+  
 }
