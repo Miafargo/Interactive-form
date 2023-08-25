@@ -1,6 +1,6 @@
 .card__container {
   min-width: 375px;
-  max-width: 1440px;
+  
 }
 
 .card__main {
@@ -123,5 +123,34 @@
 
 .card__exp span{
   font-size:0.5rem;
+  
+}
+
+.card__desktop-image{
+  display:none;
+}
+
+@media screen and (min-width: 1200px) {
+  
+
+  .card__container{
+    min-height: 900px;
+    max-width:1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+  }
+  .card__bg-image{
+    grid-area: 1/1/-1/-1;
+    display:block;
+    min-width: 250px;
+    max-width: 483px;
+    
+  }
+
+  .card__form{
+    display: grid;
+    place-items: center;
+  }
   
 }
