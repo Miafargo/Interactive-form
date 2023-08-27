@@ -153,4 +153,50 @@
     place-items: center;
   }
   
+  .card__front{
+    grid-area: 2/2/5/5;
+  }
+
+  .card__back{
+    grid-area: 4/2/7/6;
+    justify-self: end;
+    margin-top: 2.5rem;
+  }
+
+  .card__logo{
+    grid-area:2/2/3/3;
+    align-self: center;
+    margin-top:2rem;
+    margin-left:1.7rem;
+  }
+
+  .card__number{
+    grid-area:3/2/4/5;
+    font-size:1.8rem;
+  }
+
+  .card__name{
+    grid-area:3/2/4/4;
+    align-self: end;
+    justify-self: start;
+    margin-left:3rem;
+    margin-bottom:1rem;
+    font-size:.8rem;
+  }
+
+  .card__date{
+    grid-area:3/4/4/5;
+    align-self:end;
+    justify-self: end;
+    font-size:.8rem;
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+  }
+
+  .card__security{
+    grid-area:5/5/6/6;
+    font-size:.8rem;
+    margin-right:2rem;
+    margin-bottom:1.5rem;
+  }
 }
